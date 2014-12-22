@@ -293,7 +293,15 @@ config SND_SOC_OMAP_HDMI_CODEC
 config SND_SOC_PCM3008
        tristate
 
+config SND_SOC_RL6231
+	tristate
+	default y if SND_SOC_RT5640=y
+	default m if SND_SOC_RT5640=m
+
 config SND_SOC_RT5631
+	tristate
+	
+config SND_SOC_RT5640
 	tristate
 
 #Freescale sgtl5000 codec
